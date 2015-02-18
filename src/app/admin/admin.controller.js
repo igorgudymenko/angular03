@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular03.admin')
+angular.module('admin')
   .controller('AdminCtrl', function ($scope, $state) {
 
   });

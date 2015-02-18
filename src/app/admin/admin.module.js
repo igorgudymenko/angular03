@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular03.admin', ['ui.router'])
+angular.module('admin', ['ui.router'])
   .config(function ($stateProvider) {
     $stateProvider
       .state('admin', {

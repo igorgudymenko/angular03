@@ -1,10 +1,11 @@
 'use strict';
 
-angular.module('angular03', ['ui.router', 'angular03.login', 'angular03.page1', 'angular03.page2', 'angular03.admin'])
-  .config(function ($stateProvider, $urlRouterProvider, menuProvider) {
-    console.log(menuProvider);
-    menuProvider.addMenu('test', 'test', 'admin');
-    menuProvider.addMenu('test1', 'test1', 'all');
+angular.module('angular03', ['ui.router', 'menu', 'page1', 'page2', 'admin', 'login'])
+  .config(function ($stateProvider, $urlRouterProvider, $menuProvider) {
+    console.log($menuProvider);
+
+	$menuProvider.addMenu('test', 'test', 'admin');
+	$menuProvider.addMenu('test1', 'test1', 'all');
 
     $urlRouterProvider.otherwise('/login');
   })

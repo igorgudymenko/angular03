@@ -1,4 +1,4 @@
-angular.module('angular03.login', ['ui.router'])
+angular.module('login', ['ui.router'])
   .config(function($stateProvider) {
     $stateProvider
       .state('login', {

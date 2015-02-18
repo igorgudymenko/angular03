@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular03.page2', ['ui.router'])
+angular.module('page2', ['ui.router'])
   .config(function ($stateProvider) {
     $stateProvider
       .state('page2', {

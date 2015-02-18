@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('angular03')
-  .controller('NavbarCtrl', function ($scope, $state, loginService, menu) {
-    $scope.menuBuilder = menu.setMenu();
+angular.module('angular03', ['ui.router', 'menu'])
+  .controller('NavbarCtrl', function ($scope, $state, loginService, $menuProvider) {
+    $scope.menuBuilder = $menuProvider.setMenu();
 
-    console.log(menu.setMenu());
+    console.log($menuProvider.setMenu());
 
     $scope.isLogged = function() {
       return loginService.isLoggedAsAdmin();
