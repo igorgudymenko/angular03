@@ -11,7 +11,9 @@
         <li><a ui-sref="page1">Page1</a></li>
         <li><a ui-sref="page2">Page2</a></li>
         <li ng-if="isLogged()"><a ui-sref="admin">Admin</a></li>
-        <li ng-repeat="menu in menuBuilder" ng-if="checkPermission(menu.permission)"><a ui-sref="{{menu.state}}">{{menu.name}}</a></li>
+        <li ng-repeat="menu in menuBuilder" ng-if="checkPermission(menu.permission)">
+			<a ui-sref="{{menu.state}}">{{menu.name}}</a>
+		</li>
         <li><a ng-click="logout()">Exit</a></li>
       </ul>
     </div>

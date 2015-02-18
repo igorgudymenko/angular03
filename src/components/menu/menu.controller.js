@@ -11,6 +11,7 @@ angular.module('menu')
     };
 
     $scope.checkPermission = function(permission) {
+	    console.log(loginService.setPermission(permission));
       return loginService.setPermission(permission);
     };
 

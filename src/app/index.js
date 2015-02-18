@@ -4,9 +4,6 @@ angular.module('angular03', ['ui.router', 'menu', 'loginService', 'page1', 'page
   .config(function ($stateProvider, $urlRouterProvider, $menuProvider) {
     console.log($menuProvider);
 
-	$menuProvider.addMenu('test', 'test', 'admin');
-	$menuProvider.addMenu('test1', 'test1', 'all');
-
     $urlRouterProvider.otherwise('/login');
   })
   .run(['$rootScope', '$state', 'loginService', function($rootScope, $state, loginService) {

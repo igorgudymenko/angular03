@@ -24,6 +24,8 @@ angular.module('loginService', []).factory('loginService', function() {
     var username = window.localStorage.getItem('username');
     if (permission === 'admin' && username === 'admin') {
       return true;
+    } else {
+	    return 'all';
     }
   }
 
