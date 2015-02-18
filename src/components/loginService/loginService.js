@@ -13,10 +13,18 @@ angular.module('angular03').factory('loginService', function() {
     localStorage.removeItem('username');
   }
 
+  function isLoggedAsAdmin() {
+    var username = window.localStorage.getItem('username');
+    if (username === 'admin') {
+      return true;
+    }
+  }
+
   return {
     getUser: getUser,
     login: login,
-    logout: logout
+    logout: logout,
+    isLoggedAsAdmin: isLoggedAsAdmin
   }
 
 

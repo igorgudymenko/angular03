@@ -1,19 +1,10 @@
-angular.module('angular03.login')
-  .config(function($stateProvider, $urlRouterProvider, menuProvider) {
+angular.module('angular03.login', ['ui.router'])
+  .config(function($stateProvider) {
     $stateProvider
       .state('login', {
       url: '/login',
       templateUrl: 'app/login/login.html',
       controller: 'LoginCtrl'
     });
-
-  console.log(menuProvider);
-  //menuProvider.addMenuComponent('test1', 'test1');
-
-
-
   })
-  //.run(function() {
-  //
-  //})
 ;

@@ -3,7 +3,7 @@
 angular.module('angular03').provider('menu', function() {
   var menu = [];
 
-  this.addMenuComponent = function (name, state, permission) {
+  this.addMenu = function (name, state, permission) {
     menu.push({name: name, state: state, permission: permission});
 
     return this;
