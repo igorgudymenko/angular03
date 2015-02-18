@@ -2,12 +2,16 @@
 
 angular.module('angular03')
   .controller('NavbarCtrl', function ($scope, $state, loginService, menu) {
-    $scope.menuBuilder = [];
+    $scope.menuBuilder = menu.setMenu();
 
     console.log(menu.setMenu());
 
     $scope.isLogged = function() {
       return loginService.isLoggedAsAdmin();
+    };
+
+    $scope.checkPermission = function(permission) {
+      return loginService.setPermission(permission);
     };
 
     $scope.logout = function() {

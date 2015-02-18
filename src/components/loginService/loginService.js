@@ -20,11 +20,19 @@ angular.module('angular03').factory('loginService', function() {
     }
   }
 
+  function setPermission(permission) {
+    var username = window.localStorage.getItem('username');
+    if (permission === 'admin' && username === 'admin') {
+      return true;
+    }
+  }
+
   return {
     getUser: getUser,
     login: login,
     logout: logout,
-    isLoggedAsAdmin: isLoggedAsAdmin
+    isLoggedAsAdmin: isLoggedAsAdmin,
+    setPermission: setPermission
   }
 
 
