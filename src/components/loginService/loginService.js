@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular03').factory('loginService', function() {
+angular.module('loginService', []).factory('loginService', function() {
   function getUser() {
     return localStorage.getItem('username');
   }

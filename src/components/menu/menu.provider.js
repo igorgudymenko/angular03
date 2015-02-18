@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('menu').provider("$menu", function() {
+angular.module('menu', []).provider("$menu", function() {
   var menuItem = [];
 
   this.addMenu = function (name, state, permission) {

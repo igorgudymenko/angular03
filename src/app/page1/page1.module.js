@@ -9,6 +9,6 @@ angular.module('page1', ['ui.router', 'menu'])
         controller: 'Page1Ctrl'
       });
 
-    $menuProvider.addMenu('test','test1', 'admin');
+    $menuProvider.addMenu('test3','test3', 'all');
   })
 ;

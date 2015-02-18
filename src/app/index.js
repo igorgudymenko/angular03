@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular03', ['ui.router', 'menu', 'page1', 'page2', 'admin', 'login'])
+angular.module('angular03', ['ui.router', 'menu', 'loginService', 'page1', 'page2', 'admin', 'login'])
   .config(function ($stateProvider, $urlRouterProvider, $menuProvider) {
     console.log($menuProvider);
 
