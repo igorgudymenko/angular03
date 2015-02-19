@@ -4,7 +4,7 @@ angular.module('menu', []).provider("$menu", function() {
   var menuItem = [];
 
   this.addMenu = function (name, state, permission) {
-	  menuItem.push({name: name, state: state, permission: permission});
+	menuItem.push({name: name, state: state, permission: permission});
     return this;
   };
 
