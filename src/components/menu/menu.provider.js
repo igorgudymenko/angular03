@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('angular03').provider('menu', function() {
-  var menu = [];
+angular.module('menu', []).provider("$menu", function() {
+  var menuItem = [];
 
   this.addMenu = function (name, state, permission) {
-    menu.push({name: name, state: state, permission: permission});
-
+	  menuItem.push({name: name, state: state, permission: permission});
     return this;
   };
 
@@ -13,7 +12,7 @@ angular.module('angular03').provider('menu', function() {
   this.$get = function() {
     return {
       setMenu: function() {
-        return menu;
+        return menuItem;
       }
     }
   }

@@ -1,10 +1,8 @@
-/*'use strict';
+'use strict';
 
-angular.module('angular03', ['ui.router', 'menu'])
-  .controller('NavbarCtrl', function ($scope, $state, loginService, $menuProvider) {
-    $scope.menuBuilder = $menuProvider.setMenu();
-
-    console.log($menuProvider.setMenu());
+angular.module('menu')
+  .controller('MenuCtrl', function ($scope, $state, loginService, $menu) {
+    $scope.menuBuilder = $menu.setMenu();
 
     $scope.isLogged = function() {
       return loginService.isLoggedAsAdmin();
@@ -18,7 +16,4 @@ angular.module('angular03', ['ui.router', 'menu'])
       loginService.logout();
       $state.go('login');
     };
-
-
-
-  });*/
+  });

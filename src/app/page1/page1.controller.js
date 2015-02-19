@@ -1,6 +1,12 @@
 'use strict';
 
-angular.module('angular03.page1')
-  .controller('Page1Ctrl', function ($scope, $state) {
+angular.module('page1')
+  .controller('Page1Ctrl', function ($scope, $rootScope, $state) {
+    $rootScope.warningState = false;
+
+    $scope.change = function() {
+      $rootScope.warningState = true;
+      console.log('changed');
+    };
 
   });

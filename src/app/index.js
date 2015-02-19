@@ -1,15 +1,26 @@
 'use strict';
 
-angular.module('angular03', ['ui.router', 'angular03.login', 'angular03.page1', 'angular03.page2', 'angular03.admin'])
-  .config(function ($stateProvider, $urlRouterProvider, menuProvider) {
-    console.log(menuProvider);
-    menuProvider.addMenu('test', 'test', 'admin');
-    menuProvider.addMenu('test1', 'test1', 'all');
+angular.module('angular03', ['ui.router', 'menu', 'loginService', 'page1', 'page2', 'admin', 'login'])
+  .config(function ($stateProvider, $urlRouterProvider, $menuProvider) {
+    console.log($menuProvider);
 
     $urlRouterProvider.otherwise('/login');
   })
   .run(['$rootScope', '$state', 'loginService', function($rootScope, $state, loginService) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+      var warningMsg = $rootScope.warningState;
+
+      var confirm = '';
+
+      if (warningMsg) {
+        console.log('changes not saved');
+
+
+
+        event.preventDefault();
+
+      }
+
       var username = loginService.getUser();
       var state;
 

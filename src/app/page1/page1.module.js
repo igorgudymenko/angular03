@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('angular03.page1', ['ui.router'])
-  .config(function ($stateProvider/*, menuProvider*/) {
+angular.module('page1', ['ui.router', 'menu'])
+  .config(function ($stateProvider, $menuProvider) {
     $stateProvider
       .state('page1', {
         url: '/page1',
@@ -9,6 +9,15 @@ angular.module('angular03.page1', ['ui.router'])
         controller: 'Page1Ctrl'
       });
 
-    //menuProvider.addMenu('test','test1', 'admin');
+    $menuProvider.addMenu('test3','test3', 'all');
   })
+  .run(['$rootScope', '$state', function($rootScope, $sate){
+    $rootScope.$on('$stateChangeStart', function(event) {
+      var warning = $rootScope.warningState;
+      if (warning) {
+        console.log('unsaved data');
+        event.preventDefault();
+      }
+    })
+  }])
 ;

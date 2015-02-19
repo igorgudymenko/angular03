@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular03').factory('loginService', function() {
+angular.module('loginService', []).factory('loginService', function() {
   function getUser() {
     return localStorage.getItem('username');
   }
@@ -24,6 +24,8 @@ angular.module('angular03').factory('loginService', function() {
     var username = window.localStorage.getItem('username');
     if (permission === 'admin' && username === 'admin') {
       return true;
+    } else {
+	    return 'all';
     }
   }
 

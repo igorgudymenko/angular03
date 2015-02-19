@@ -1,5 +1,4 @@
-<!--
-<nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl">
+<nav class="navbar navbar-static-top navbar-inverse" ng-controller="MenuCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" ui-sref="/">
@@ -12,10 +11,11 @@
         <li><a ui-sref="page1">Page1</a></li>
         <li><a ui-sref="page2">Page2</a></li>
         <li ng-if="isLogged()"><a ui-sref="admin">Admin</a></li>
-        <li ng-repeat="menu in menuBuilder" ng-if="checkPermission(menu.permission)"><a ui-sref="{{menu.state}}">{{menu.name}}</a></li>
+        <li ng-repeat="menu in menuBuilder" ng-if="checkPermission(menu.permission)">
+          <a ui-sref="{{menu.state}}">{{menu.name}}</a>
+        </li>
         <li><a ng-click="logout()">Exit</a></li>
       </ul>
     </div>
   </div>
 </nav>
--->
