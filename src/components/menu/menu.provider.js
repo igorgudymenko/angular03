@@ -8,7 +8,6 @@ angular.module('menu', []).provider("$menu", function() {
     return this;
   };
 
-
   this.$get = function() {
     return {
       setMenu: function() {

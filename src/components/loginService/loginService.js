@@ -36,7 +36,4 @@ angular.module('loginService', []).factory('loginService', function() {
     isLoggedAsAdmin: isLoggedAsAdmin,
     setPermission: setPermission
   }
-
-
-
 });

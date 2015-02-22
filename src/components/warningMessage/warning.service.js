@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('warningService', []).factory('warningService', function($modal, $modalStack, $state) {
-
   function setState(name) {
     $state.params.toState = name;
   }
@@ -19,7 +18,6 @@ angular.module('warningService', []).factory('warningService', function($modal, 
       templateUrl: 'components/warningMessage/warning.html',
       controller: 'WarningCtrl'
     });
-
   }
 
   function closeDialog() {

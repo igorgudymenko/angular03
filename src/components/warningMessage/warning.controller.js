@@ -5,6 +5,7 @@ angular.module('angular03')
     $scope.cancel = function() {
       warningService.closeDialog();
     };
+
     $scope.confirm = function() {
       warningService.clearMessage();
       $state.go(warningService.getState());

@@ -2,8 +2,6 @@
 
 angular.module('angular03', ['ui.router', 'ui.bootstrap', 'menu', 'loginService', 'warningService', 'page1', 'page2', 'admin', 'login'])
   .config(function ($stateProvider, $urlRouterProvider, $menuProvider) {
-    console.log($menuProvider);
-
     $urlRouterProvider.otherwise('/login');
   })
   .run(['$rootScope', '$state', '$modal', 'loginService', 'warningService', function($rootScope, $state, $modal, loginService, warningService) {
