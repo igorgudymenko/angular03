@@ -1,4 +1,12 @@
 <div ng-controller="WarningCtrl">
-  <span>Changes not saved!</span>
-  <button ng-click="confirm()">OK</button>
+    <div class="modal-header">
+        <h1>Warning</h1>
+    </div>
+    <div class="modal-body">
+        You have unsaved data!<br> You want lave this page?
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="confirm()">OK</button>
+    </div>
 </div>

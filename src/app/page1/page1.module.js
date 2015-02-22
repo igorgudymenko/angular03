@@ -11,13 +11,4 @@ angular.module('page1', ['ui.router', 'menu'])
 
     $menuProvider.addMenu('test3','test3', 'all');
   })
-  .run(['$rootScope', '$state', function($rootScope, $sate){
-    $rootScope.$on('$stateChangeStart', function(event) {
-      var warning = $rootScope.warningState;
-      if (warning) {
-        console.log('unsaved data');
-        event.preventDefault();
-      }
-    })
-  }])
 ;
